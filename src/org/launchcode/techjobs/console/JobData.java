@@ -91,19 +91,12 @@ public class JobData {
         loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-        //new ArrayList called jobs
         for (HashMap<String, String> row : allJobs) {
-        //for each loop
             for (String entry : row.values()) {
-            //for each loop
                 if (entry.toLowerCase().contains(value.toLowerCase())) {
-                //if key-value pair contains value
                     if (!jobs.contains(value)) {
-                    //if jobs does not contain value
                         jobs.add(row);
-                        //add row
                         break;
-                        //terminate loop
                     }
                 }
             }
